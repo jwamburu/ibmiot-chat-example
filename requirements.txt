@@ -1,0 +1,5 @@
+ibmiotf==0.1.8
+iso8601==0.1.11
+paho-mqtt==1.1
+pytz==2015.7
+requests==2.9.1
