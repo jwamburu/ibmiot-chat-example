@@ -16,7 +16,7 @@ organization = "kbuozk"
 # Device Settings
 device_id = "JohnWamburu"
 device_type = "ChatDevice"
-device_auth_token = ""
+device_auth_token = "V2vomJ&a751z6Qb2YJ"
 
 
 # Event settings
@@ -26,8 +26,8 @@ msg_format = "json"
 
 # Application Settings
 application_id = "ApplicationForJohnWamburu"
-application_auth_key = ""
-application_auth_token = ""
+application_auth_key = "a-kbuozk-wbdxkcqupx"
+application_auth_token = "P7cwD)IDB(jKak4qlb"
 
 
 
@@ -42,7 +42,7 @@ try:
     }
     client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
-    print "Client was unable to connect to IBM IoT : {}".format(e)
+    print("Client was unable to connect to IBM IoT : {}".format(e))
 
 client.connect()
 
@@ -59,7 +59,7 @@ try:
     }
     application = ibmiotf.application.Client(options)
 except ibmiotf.ConnectionException  as e:
-    print "Application was unable to connect to IBM IoT : {}".format(e)
+    print("Application was unable to connect to IBM IoT : {}".format(e))
 
 
 def chat_events_callback(event):
@@ -67,7 +67,7 @@ def chat_events_callback(event):
     What to do with messages received from device
     """
     data = json.loads(event.data)
-    print "{} : {}".format(event.deviceId, data.get("d").get("message"))
+    print("{} : {}".format(event.deviceId, data.get("d").get("message")))
     
     
 application.connect()
@@ -84,10 +84,10 @@ def start_chat():
     """
     Get user input and send to subscribed applications. Quit on 'q'
     """
-    print "Enter a message to start chatting! \n"
+    print("Enter a message to start chatting! \n")
     message = None
     while message != "q":
-        message = raw_input()
+        message = input()
         data = {
             "d": {
                 "message" : message
