@@ -10,13 +10,13 @@ import ibmiotf.device
 import ibmiotf.application
 
 
-organization = "kbuozk"
+organization = ""
 
 
 # Device Settings
 device_id = "JohnWamburu"
 device_type = "ChatDevice"
-device_auth_token = "V2vomJ&a751z6Qb2YJ"
+device_auth_token = ""
 
 
 # Event settings
@@ -26,8 +26,8 @@ msg_format = "json"
 
 # Application Settings
 application_id = "ApplicationForJohnWamburu"
-application_auth_key = "a-kbuozk-wbdxkcqupx"
-application_auth_token = "P7cwD)IDB(jKak4qlb"
+application_auth_key = ""
+application_auth_token = ""
 
 
 
